@@ -1,0 +1,48 @@
+
+<html>
+
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+
+		<script type="text/javascript" src="anode.js"></script>
+
+		<style type="text/css">
+
+			.area {
+				border: 1px solid #fcc;
+			}
+
+			#imagebox {
+				cursor: crosshair;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+
+			 $(document).ready(function(){
+					 main();
+			 });
+
+		</script>
+	</head>
+
+	<body>
+
+		<form onsubmit="return false;" >
+			<input type="text" name="imagename" id="imagename"/>
+		</form>
+
+		<div id="imagebox">
+		</div>
+
+		<div id="entries">
+			<form>
+			</form>
+		</div>
+
+		<div id="output">
+		</div>
+
+	</body>
+</html>
