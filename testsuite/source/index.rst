@@ -5,20 +5,18 @@
 Welcome to the Anode Example
 ============================
 
-.. anode:: 289 434 _images/maya_example.png
+.. annotated-image:: 289 434 _images/maya_example.png
 
-   (
-      (20, 30, 40, 50, 
-         "First name",
-         """
+   .. annotation:: 20 30 40 50
+      
+      **First name**
          This is some example text.
-         """),
-      (200, 40, 40, 50, 
-         "Second name",
-         """
+
+   .. annotation:: 200 40 40 50
+
+      **Second Name**
          This is some more example text.
-         """),
-   )
+      
 
 Indices and tables
 ==================

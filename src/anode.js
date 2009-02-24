@@ -33,7 +33,7 @@ function image_mouse_down( info )
 
 	$("#imagebox").append("<div class='area' id='" + div_name + "'></div>");
 
-	state.entries.push( new Entry( new Div( $("#" + div_name ), div_name, info.pageY, info.pageX ) ) );
+	state.entries.push( new Entry( new Div( $("#" + div_name ), div_name, info.pageY - this.offsetTop, info.pageX - this.offsetLeft ) ) );
 
 	// $("#entries").html( info.pageX + " " + info.pageY + " <br/>" + this.offsetLeft + " " + this.offsetTop + "<br/>Id: " + div_name );
 }
