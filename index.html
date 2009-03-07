@@ -1,1 +1,228 @@
-My github page for anode
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Anode Project &mdash; AnodeExample v0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="AnodeExample v0.0.1 documentation" href="" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="">AnodeExample v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="anode-project">
+<h1>Anode Project<a class="headerlink" href="#anode-project" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of this project is to create restructured text directives for
+annotating images. It allows you to highlight regions of an image and associate
+them with simple labels and longer explanations.</p>
+<div class="section" id="basic-example">
+<h2>Basic Example<a class="headerlink" href="#basic-example" title="Permalink to this headline">¶</a></h2>
+<p>The is a basic example of using the anode directives.</p>
+<div class="section" id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="ow">annotated-image</span><span class="p">::</span> <span class="k">80 220 _images/shapes.png</span>
+
+<span class="p">   ..</span> <span class="ow">annotation</span><span class="p">::</span> <span class="k">22 16 34 36</span>
+
+      <span class="gs">**Circle**</span>
+         This circle is red. 
+
+<span class="p">   ..</span> <span class="ow">annotation</span><span class="p">::</span> <span class="k">10 69 59 75</span>
+
+      <span class="gs">**Triangle**</span>
+         This is a yellow triangle.
+
+<span class="p">   ..</span> <span class="ow">annotation</span><span class="p">::</span> <span class="k">19 158 40 45</span>
+
+      <span class="gs">**Square**</span>
+         And this is a square.
+   
+</pre></div>
+</div>
+</div>
+<div class="section" id="result">
+<h3>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
+<div style="position: relative; width: 220px; height: 80px; background-image: url(_images/shapes.png)">
+<div style="position: absolute;top: 22px;left: 16px;">
+<a onmouseout="$('#b6589fc6ab0dc82cf12099d1c2d40ab994e8410c').css('background-color', 'transparent');$(this).css('border-color', 'transparent');" onmouseover="$('#b6589fc6ab0dc82cf12099d1c2d40ab994e8410c').css('background-color', '#ffffaa');$(this).css('border-color','black');" style="height: 34px;width: 36px;border: 2px solid transparent;cursor: pointer;display: block;">
+</a></div>
+<div style="position: absolute;top: 10px;left: 69px;">
+<a onmouseout="$('#356a192b7913b04c54574d18c28d46e6395428ab').css('background-color', 'transparent');$(this).css('border-color', 'transparent');" onmouseover="$('#356a192b7913b04c54574d18c28d46e6395428ab').css('background-color', '#ffffaa');$(this).css('border-color','black');" style="height: 59px;width: 75px;border: 2px solid transparent;cursor: pointer;display: block;">
+</a></div>
+<div style="position: absolute;top: 19px;left: 158px;">
+<a onmouseout="$('#da4b9237bacccdf19c0760cab7aec4a8359010b0').css('background-color', 'transparent');$(this).css('border-color', 'transparent');" onmouseover="$('#da4b9237bacccdf19c0760cab7aec4a8359010b0').css('background-color', '#ffffaa');$(this).css('border-color','black');" style="height: 40px;width: 45px;border: 2px solid transparent;cursor: pointer;display: block;">
+</a></div>
+</div>
+
+<div id="b6589fc6ab0dc82cf12099d1c2d40ab994e8410c">
+<dl class="docutils">
+<dt><strong>Circle</strong></dt>
+<dd>This circle is red.</dd>
+</dl>
+</div><div id="356a192b7913b04c54574d18c28d46e6395428ab">
+<dl class="docutils">
+<dt><strong>Triangle</strong></dt>
+<dd>This is a yellow triangle.</dd>
+</dl>
+</div><div id="da4b9237bacccdf19c0760cab7aec4a8359010b0">
+<dl class="docutils">
+<dt><strong>Square</strong></dt>
+<dd>And this is a square.</dd>
+</dl>
+</div></div>
+</div>
+<div class="section" id="example-with-names">
+<h2>Example With Names<a class="headerlink" href="#example-with-names" title="Permalink to this headline">¶</a></h2>
+<p>Using the directives with the additional <tt class="docutils literal"><span class="pre">name</span></tt> option.</p>
+<div class="section" id="id1">
+<h3>Code<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="ow">annotated-image</span><span class="p">::</span> <span class="k">80 220 _images/shapes.png</span>
+
+<span class="p">   ..</span> <span class="ow">annotation</span><span class="p">::</span> <span class="k">22 16 34 36</span>
+      :name: circle
+
+      <span class="gs">**Circle**</span>
+         This circle is red. 
+
+<span class="p">   ..</span> <span class="ow">annotation</span><span class="p">::</span> <span class="k">10 69 59 75</span>
+      :name: triangle
+
+      <span class="gs">**Triangle**</span>
+         This is a yellow triangle.
+
+<span class="p">   ..</span> <span class="ow">annotation</span><span class="p">::</span> <span class="k">19 158 40 45</span>
+      :name: square
+
+      <span class="gs">**Square**</span>
+         And this is a square.
+   
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Result<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div style="position: relative; width: 220px; height: 80px; background-image: url(_images/shapes.png)">
+<div style="position: absolute;top: 22px;left: 16px;">
+<a onmouseout="$('#77de68daecd823babbb58edb1c8e14d7106e83bb').css('background-color', 'transparent');$(this).css('border-color', 'transparent');$('#77de68daecd823babbb58edb1c8e14d7106e83bb_name').css('display','none');" onmouseover="$('#77de68daecd823babbb58edb1c8e14d7106e83bb').css('background-color', '#ffffaa');$(this).css('border-color','black');$('#77de68daecd823babbb58edb1c8e14d7106e83bb_name').css('display','inline');" style="height: 34px;width: 36px;border: 2px solid transparent;cursor: pointer;display: block;">
+</a><div>
+<span id="77de68daecd823babbb58edb1c8e14d7106e83bb_name" style="padding: 2px; display: none; background-color: black; color: white; font-size: x-small;">
+circle</span></div></div>
+<div style="position: absolute;top: 10px;left: 69px;">
+<a onmouseout="$('#1b6453892473a467d07372d45eb05abc2031647a').css('background-color', 'transparent');$(this).css('border-color', 'transparent');$('#1b6453892473a467d07372d45eb05abc2031647a_name').css('display','none');" onmouseover="$('#1b6453892473a467d07372d45eb05abc2031647a').css('background-color', '#ffffaa');$(this).css('border-color','black');$('#1b6453892473a467d07372d45eb05abc2031647a_name').css('display','inline');" style="height: 59px;width: 75px;border: 2px solid transparent;cursor: pointer;display: block;">
+</a><div>
+<span id="1b6453892473a467d07372d45eb05abc2031647a_name" style="padding: 2px; display: none; background-color: black; color: white; font-size: x-small;">
+triangle</span></div></div>
+<div style="position: absolute;top: 19px;left: 158px;">
+<a onmouseout="$('#ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4').css('background-color', 'transparent');$(this).css('border-color', 'transparent');$('#ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4_name').css('display','none');" onmouseover="$('#ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4').css('background-color', '#ffffaa');$(this).css('border-color','black');$('#ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4_name').css('display','inline');" style="height: 40px;width: 45px;border: 2px solid transparent;cursor: pointer;display: block;">
+</a><div>
+<span id="ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4_name" style="padding: 2px; display: none; background-color: black; color: white; font-size: x-small;">
+square</span></div></div>
+</div>
+
+<div id="77de68daecd823babbb58edb1c8e14d7106e83bb">
+<dl class="docutils">
+<dt><strong>Circle</strong></dt>
+<dd>This circle is red.</dd>
+</dl>
+</div><div id="1b6453892473a467d07372d45eb05abc2031647a">
+<dl class="docutils">
+<dt><strong>Triangle</strong></dt>
+<dd>This is a yellow triangle.</dd>
+</dl>
+</div><div id="ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4">
+<dl class="docutils">
+<dt><strong>Square</strong></dt>
+<dd>And this is a square.</dd>
+</dl>
+</div></div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">Anode Project</a><ul>
+<li><a class="reference external" href="#basic-example">Basic Example</a><ul>
+<li><a class="reference external" href="#code">Code</a></li>
+<li><a class="reference external" href="#result">Result</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#example-with-names">Example With Names</a><ul>
+<li><a class="reference external" href="#id1">Code</a></li>
+<li><a class="reference external" href="#id2">Result</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/index.txt">Show Source</a></li>
+            </ul>
+          <h3>Quick search</h3>
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="">AnodeExample v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009, Michael Jones.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.5.1.
+    </div>
+  </body>
+</html>
