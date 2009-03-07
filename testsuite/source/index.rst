@@ -5,18 +5,36 @@
 Welcome to the Anode Example
 ============================
 
-.. annotated-image:: 289 434 _images/maya_example.png
+Basic Example
+-------------
 
-   .. annotation:: 20 30 40 50
+Code 
+~~~~
+
+.. literalinclude:: basicexample.rest
+   :language: rest
+
+Result
+~~~~~~
+
+.. include:: basicexample.rest
+
       
-      **First name**
-         This is some example text.
+Example With Names
+------------------
 
-   .. annotation:: 200 40 40 50
+Code
+~~~~
 
-      **Second Name**
-         This is some more example text.
-      
+.. literalinclude:: namedexample.rest
+   :language: rest
+
+Result
+~~~~~~
+
+.. include:: namedexample.rest
+
+
 
 Indices and tables
 ==================

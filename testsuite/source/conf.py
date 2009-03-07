@@ -24,7 +24,7 @@ import sys, os
 # General configuration
 # ---------------------
 
-sys.path.append( "../" )
+sys.path.insert( 0, "../" )
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.

@@ -1,0 +1,21 @@
+
+.. annotated-image:: 80 220 _images/shapes.png
+
+   .. annotation:: 22 16 34 36
+      :name: circle
+
+      **Circle**
+         This circle is red. 
+
+   .. annotation:: 10 69 59 75
+      :name: triangle
+
+      **Triangle**
+         This is a yellow triangle.
+
+   .. annotation:: 19 158 40 45
+      :name: square
+
+      **Square**
+         And this is a square.
+   
