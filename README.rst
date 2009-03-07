@@ -28,6 +28,7 @@ This project introduces two rst directives::
 and::
 
    .. annotation:: <top> <left> <height> <width>
+      :name: Optional name
 
       Text to associate with the specified region of the image.
 

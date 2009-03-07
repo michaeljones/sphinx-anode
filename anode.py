@@ -40,16 +40,16 @@ class AnnotatedImage(nodes.image):
                 a_style += "cursor: pointer;"
                 a_style += "display: block;"
 
-                name_style = "padding: 1px; display: none; background-color: black; color: white; font-size: x-small;"
+                name_style = "padding: 2px; display: none; background-color: black; color: white; font-size: x-small;"
                     
-                a_mouseover = "$('#" + info["id"] + "').css('background-color', 'yellow');"
+                a_mouseover = "$('#" + info["id"] + "').css('background-color', '#ffffaa');"
                 a_mouseover += "$(this).css('border-color','black');"
                 a_mouseout = "$('#" + info["id"] + "').css('background-color', 'transparent');"
                 a_mouseout += "$(this).css('border-color', 'transparent');"
                 
                 if info["name"]:
                     name_id = info["id"] + "_name"
-                    a_mouseover += "$('#" + name_id + "').css('display','block');"
+                    a_mouseover += "$('#" + name_id + "').css('display','inline');"
                     a_mouseout += "$('#" + name_id + "').css('display','none');"
 
                 visitor.body.append(visitor.starttag(node, "div", style=div_style))
@@ -67,8 +67,10 @@ class AnnotatedImage(nodes.image):
                 # If a name is specfied then add that
                 if info["name"]:
                     name_id = info["id"] + "_name"
-                    visitor.body.append(visitor.starttag(node, "div", ids=[name_id], style=name_style))
+                    visitor.body.append(visitor.starttag(node, "div"))
+                    visitor.body.append(visitor.starttag(node, "span", ids=[name_id], style=name_style))
                     visitor.body.append(info["name"]);
+                    visitor.body.append("</span>")
                     visitor.body.append("</div>")
 
                 visitor.body.append("</div>\n")
