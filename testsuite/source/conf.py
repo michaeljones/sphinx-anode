@@ -31,7 +31,7 @@ sys.path.insert( 0, "../" )
 extensions = [ "anode" ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -89,12 +89,6 @@ exclude_trees = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
-# Options for breathe extension
-# -----------------------------
-
-breathe_path = [ "../../examples/doxygen/class/xml/" ]
-
-
 # Options for HTML output
 # -----------------------
 
@@ -122,7 +116,7 @@ html_style = 'default.css'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

@@ -1,5 +1,5 @@
 
-.. annotated-image:: 80 220 _images/shapes.png
+.. annotated-image:: 80 220 images/shapes.png
 
    .. annotation:: 22 16 34 36
 
