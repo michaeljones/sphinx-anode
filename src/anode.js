@@ -128,14 +128,6 @@ function image_mouse_up( info )
 	entry.name_id = "name_" + state.entries.length;
 	entry.desc_id = "desc_" + state.entries.length;
 
-	var form = $("#entries form");
-
-	form
-		.append("<div>")
-		.append("<div>Name: <input id='" + entry.name_id + "' type='text'/></div>")
-	    .append("<div>Description: <textarea id='" + entry.desc_id + "' ></textarea></div>")
-	    .append("</div>");
-
 	build_output();
 }
 
