@@ -4,6 +4,7 @@ from docutils.parsers.rst import directives, Directive
 
 import os
 import hashlib
+import posixpath
 
 # Nodes
 # -----
@@ -12,6 +13,12 @@ class AnnotatedImage(nodes.image):
 
     @staticmethod
     def visit(visitor, node):
+        
+        olduri = node['uri']
+        # rewrite the URI if the environment knows about it
+        if olduri in visitor.builder.images:
+            node['uri'] = posixpath.join(visitor.builder.imgpath,
+                                         visitor.builder.images[olduri])
 
         # Create the div which will display the image
         visitor.body.append(
@@ -19,7 +26,7 @@ class AnnotatedImage(nodes.image):
                     node,
                     "div",
                     style="position: relative; width: %spx; height: %spx; background-image: url(%s)"
-                                % ( node.width, node.height, node.uri_path )
+                                % ( node.width, node.height, node['uri'] )
                     )
                 )
 
