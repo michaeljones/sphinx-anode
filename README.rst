@@ -3,7 +3,7 @@ Anode Project
 =============
 
 This project is aimed at creating restructed text directives for annotating
-images.
+images. The inital drive is towards creating a Sphinx extension.
 
 Features
 --------
@@ -16,7 +16,7 @@ Status
 
 A basic implementation of the directives is in place and working. 
 
-The web page is still in development.
+The web page works and is useful but looks mighty ugly.
 
 Syntax
 ------
@@ -35,3 +35,4 @@ and::
 
 The ``annotation`` directives should be nested within the ``annotated-image``
 block.
+
