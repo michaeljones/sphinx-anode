@@ -26,7 +26,7 @@ class AnnotatedImage(nodes.image):
                     node,
                     "div",
                     style="position: relative; width: %spx; height: %spx; background-image: url(%s)"
-                                % ( node.width, node.height, node['uri'] )
+                                % ( node["width"], node["height"], node['uri'] )
                     )
                 )
 
@@ -96,19 +96,19 @@ class Annotation(nodes.General, nodes.Element):
     def annotation_info(self):
 
         return dict(
-                id=self.hashid,
-                name=self.name,
-                top=self.top,
-                left=self.left,
-                height=self.height,
-                width=self.width
+                id=self["hashid"],
+                name=self["name"],
+                top=self["top"],
+                left=self["left"],
+                height=self["height"],
+                width=self["width"]
                 )
 
     @staticmethod
     def visit(visitor, node):
 
         # Create the div with the desired id
-        id = node.hashid
+        id = node["hashid"]
         visitor.body.append(visitor.starttag( node, "div", ids=[id]))
 
     @staticmethod
@@ -136,9 +136,9 @@ class AnnotatedImageDirective(Directive):
         self.options['uri'] = reference
 
         annotated_image = AnnotatedImage(**self.options)
-        annotated_image.uri_path = uri
-        annotated_image.height = height
-        annotated_image.width = width
+        annotated_image["uri_path"] = uri
+        annotated_image["height"] = height
+        annotated_image["width"] = width
 
         self.state.nested_parse(self.content, self.content_offset, annotated_image)
 
@@ -159,18 +159,14 @@ class AnnotationDirective(Directive):
         annotation = Annotation()
         
         # Generate an id for the div
-        annotation.hashid = hashlib.sha1(str(len(self.hashes))).hexdigest()
-        self.hashes.append(annotation.hashid)
+        annotation["hashid"] = hashlib.sha1(str(len(self.hashes))).hexdigest()
+        self.hashes.append(annotation["hashid"])
 
-        annotation.top = self.arguments[0]
-        annotation.left = self.arguments[1]
-        annotation.height = self.arguments[2]
-        annotation.width = self.arguments[3]
-
-        try: 
-            annotation.name = self.options["name"]
-        except KeyError:
-            annotation.name = None
+        annotation["top"] = self.arguments[0]
+        annotation["left"] = self.arguments[1]
+        annotation["height"] = self.arguments[2]
+        annotation["width"] = self.arguments[3]
+        annotation["name"] = self.options.get("name")
 
         # Parse the children
         self.state.nested_parse(self.content, self.content_offset, annotation)
