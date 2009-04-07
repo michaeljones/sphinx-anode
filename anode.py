@@ -182,15 +182,11 @@ def setup(app):
     app.add_directive(
             "annotated-image",
             AnnotatedImageDirective,
-            1,
-            (3,0,0)
             )
 
     app.add_directive(
             "annotation",
             AnnotationDirective,
-            1,
-            (4,0,0)
             )
 
     app.add_node(AnnotatedImage, html=(AnnotatedImage.visit, AnnotatedImage.depart))
